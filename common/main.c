@@ -334,7 +334,7 @@ static __inline__ int abortboot(int bootdelay)
 
 
 #ifdef  CONFIG_EMBEDSKY_FAT
-		//设定：从SD卡启动就可以自动烧写，从Nand启动就不能自动烧写。
+		//设定：从SD卡启动就可以自动烧写，从Nand启动就不能自动烧写�?
 		if((ret != 0xff) && (TQ210_boot_src() == BOOT_MMCSD))
 		{
 			if (!FAT_Init())						//初始化SD卡和FAT成功
@@ -350,7 +350,7 @@ static __inline__ int abortboot(int bootdelay)
 						ret = 0;
 						break;
 					}
-					case 254://-2//if (c == 254)//-2				//install或run的内容不对
+					case 254://-2//if (c == 254)//-2				//install或run的内容不�?
 					{
 						printf("run/install info is error,so u-boot run OS!\n");
 						ret = 0;
@@ -374,13 +374,13 @@ static __inline__ int abortboot(int bootdelay)
 						ret = 1;
 						break;
 					}
-					case 2://2//else if (c == 2)					//是run，直接运行
+					case 2://2//else if (c == 2)					//是run，直接运�?
 					{
 						printf("u-boot will run OS!\n");
 						ret = 2;
 						break;
 					}
-					case 3://2//else if (c == 2)					//是run，直接运行
+					case 3://2//else if (c == 2)					//是run，直接运�?
 					{
 						printf("Download WinCE images!\n");
 						ret = 3;
@@ -390,11 +390,11 @@ static __inline__ int abortboot(int bootdelay)
 						break;
 				}
 #ifdef CONFIG_EmbedSky_LCD
-				if((ret == 1) || (ret == 2))		//烧写成功或run就直接启动
+				if((ret == 1) || (ret == 2))		//烧写成功或run就直接启�?
 				{
 					embedsky_user_logo();
 				}
-				else		//只要烧写没成功或不是run就进入下载模式
+				else		//只要烧写没成功或不是run就进入下载模�?
 				{
 					abort  = 1;	/* don't auto boot	*/
 					bootdelay = 0;	/* no more delay	*/
@@ -670,7 +670,7 @@ printf("Start Linux ......");
 
 #endif /* CONFIG_EmbedSky_LCD */
 #ifdef CONFIG_CMD_MENU
-	run_command("menu", 0);
+	//run_command("menu", 0);
 #endif
 
 	/*
