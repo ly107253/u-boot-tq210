@@ -55,7 +55,7 @@
 #undef CONFIG_TQ210_1G
 #endif
 
-#if 1								//是否支持WinCE的烧写
+#if 1								//是否支持WinCE的烧�?
 #define CONFIG_SUPPORT_WINCE
 #else
 #undef CONFIG_SUPPORT_WINCE
@@ -178,7 +178,7 @@
 /*
  * select serial console configuration
  */
-//串口号在这里是从1开始计算的到4结束。
+//串口号在这里是从1开始计算的�?结束�?
 #define CONFIG_SERIAL1      			    1	/* we use UART1 on TQ210 */
 //#define CONFIG_SERIAL2      			    2	/* we use UART2 on TQ210 */
 //#define CONFIG_SERIAL3      			    3	/* we use UART3 on TQ210 */
@@ -698,7 +698,7 @@
 #define CFG_LCD_NONAME1			// for V210 - wide LCD
 #define CFG_LCD_FBUFFER						(0x48000000)
 
-#define CONFIG_BOOTDELAY					0
+#define CONFIG_BOOTDELAY					3
 #if defined(CFG_FASTBOOT_NANDBSP)
 #define CONFIG_BOOTCOMMAND					"nand read.jffs2 0xc0008000 kernel;bootm 0xc0008000"
 #elif defined(CFG_FASTBOOT_SDMMCBSP)
